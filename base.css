@@ -95,14 +95,12 @@ textArea:focus,
   cursor:pointer;
 }
 .nav-in{
+  display:block;
   opacity: 1;
-  left:0;
-  transition:0.5s ease-in;
 }
 .nav-out{
-  left:-200px;
-  opacity: 0;
-  transition:0.5s ease-in;
+  display:block;
+  opacity: 1;
 }
 .btn-in{
   left:220px;
@@ -248,6 +246,16 @@ textArea:focus,
   #menu-button {
     display: block;
   }
+  .nav-in{
+  opacity: 1;
+  left:0;
+  transition:0.5s ease-in;
+}
+.nav-out{
+  left:-200px;
+  opacity: 0;
+  transition:0.5s ease-in;
+}
 }
 @media (max-width: 520px) {
   #search-form {
