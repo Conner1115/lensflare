@@ -150,6 +150,24 @@ textArea:focus,
   outline:none;
 }
 
+#msg-img{
+  position:relative;
+  left:35%;
+  width:30%;
+}
+#message{
+  width:50%;
+  min-width: 240px;
+  max-width:400px;
+  position:absolute;
+  top:50%;
+  left:50%;
+  transform:translate(-50%, -50%);
+  background:var(--col1);
+  border-radius:10px;
+  box-shadow: 0 0 10px 0 rgba(0,0,0,0.25);
+  padding:20px;
+}
 #nav-close{
   width:30px;
   height:27.5px;
