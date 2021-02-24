@@ -124,6 +124,7 @@ textArea:focus,
   color:var(--t1);
   position:fixed;
   top:110px;
+  background:var(--col1);
 }
 #nav-close:hover{
   cursor:pointer;
