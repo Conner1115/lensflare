@@ -27,7 +27,7 @@ button {
   font-family: var(--font);
   color: var(--colt);
 }
-button:hover {
+button:hover, [type="submit"]:hover {
   cursor: pointer;
 }
 h1,
@@ -44,9 +44,26 @@ a {
   color: rgb(0, 200, 255);
 }
 
-textArea,
+.log-form{
+  width:50%;
+  max-width:400px;
+  min-width:240px;
+  padding:20px;
+  box-shadow: 0 0 10px 0 rgba(0,0,0,0.25);
+  border-radius: 15px;
+  position:absolute;
+  top:50%;
+  left:50%;
+  transform:translate(-50%, -50%);
+  background:var(--col1);
+}
+.form-label{
+  margin-left:5%;
+}
 .form-control > input,
 .form-input {
+  margin-left:calc(10% - 5px);
+  width:80%;
   border: none;
   background: var(--col1);
   border-radius: 10px;
@@ -56,13 +73,14 @@ textArea,
   box-shadow: inset 0 0 2px rgba(0, 0, 0, 0.25);
   font-size: 15px;
   border-radius: 5px;
+  margin-bottom: 10px;
 }
 textArea:focus,
 .form-control > input:focus,
 .form-input:focus {
   transition: 0.25s;
   box-shadow: inset 0 0 2px rgba(0, 0, 0, 0.25),
-    0 0 0 1px rgba(0, 100, 200, 0.5), 0 0 0 4px rgba(0, 150, 255, 0.5);
+    0 0 0 1px rgba(0,175,50, 0.5), 0 0 0 4px rgba(50,200,100, 0.5);
 }
 .selected {
   background: var(--m2);
@@ -112,6 +130,24 @@ textArea:focus,
   transform:rotate(0deg);
   transition: 0.5s ease-in;
   
+}
+.form-submit > input{
+  position:relative;
+  left:50%;
+  transform:translatex(-50%);
+  margin-top:15px;
+  padding:5px;
+  border-radius:5px;
+  font-family:'Montserrat', sans-serif;
+  margin-bottom: 10px;
+  width: 80%;
+  background: rgb(0, 175, 50);
+  border: solid rgb(0, 150, 0) 1px;
+  border-radius: 5px;
+  color: white;
+  font-weight: bold;
+  font-size: 15px;
+  outline:none;
 }
 
 #nav-close{
@@ -209,6 +245,28 @@ textArea:focus,
   z-index:0;
   overflow-x:hidden;
   overflow-y:auto;
+}
+#error{
+  position:fixed;
+  left:0;
+  bottom:0;
+  color:var(--col1);
+  background:rgb(225,50,0);
+  width:100%;
+  padding:5px;
+  font-size:15px;
+}
+#error > span{
+  position:relative;
+  bottom:4px;
+  margin-left: 10px;
+}
+#error > svg{
+  position:relative;
+  top:3px;
+}
+#error:hover{
+  cursor:pointer;
 }
 
 @media (max-width: 780px) {
