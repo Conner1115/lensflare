@@ -44,6 +44,10 @@ a {
   text-decoration: none;
   color: rgb(0, 200, 255);
 }
+p{
+  padding-left: 10%;
+  padding-right: 10%;
+}
 
 .ni{
   margin-top:5px;
@@ -433,6 +437,7 @@ textArea:focus,
   }
 }
 
+/*
 @media (max-width: 780px) {
   .def {
     display: none;
@@ -497,6 +502,78 @@ textArea:focus,
   }
 }
 @media (max-width: 320px) {
+  #nav-tabs {
+    width: 100%;
+  }
+}*/
+
+@media (max-width: 950px) {
+  .def {
+    display: none;
+  }
+  .alt {
+    display: block;
+  }
+  .nav-tab {
+    font-size: 12px;
+  }
+}
+@media (max-width: 680px) {
+  #logo-title {
+    display:  block;
+    position: relative;
+    top: -15px;
+  }
+  #logo-name {
+    display: none;
+  }
+  #nav-tabs {
+    width: 200px;
+    min-height: 200px;
+    background: var(--col2);
+    overflow-y: auto;
+    display: block;
+    position: relative;
+    top: 44px;
+  }
+  .nav-tab {
+    padding: 7.5px 5px 7.5px 20px;
+    height: auto;
+  }
+  #menu-button {
+    display: block;
+  }
+  .nav-in {
+    opacity: 1;
+    left: 0;
+    transition: 0.5s ease-in;
+  }
+  .nav-out {
+    left: -200px;
+    opacity: 0;
+    transition: 0.5s ease-in;
+  }
+}
+@media (max-width: 580px) {
+  #search-form {
+    display: none;
+  }
+  .sc {
+    display: block !important;
+  }
+}
+@media (max-width: 400px) {
+  .nav-link > a {
+    margin: 0 12.5px;
+  }
+  #menu-button {
+    left: 55px;
+  }
+}
+@media (max-width: 320px) {
+  .nav-link > a {
+    margin: 0 7.5px;
+  }
   #nav-tabs {
     width: 100%;
   }
