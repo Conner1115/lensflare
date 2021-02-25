@@ -45,6 +45,23 @@ a {
   color: rgb(0, 200, 255);
 }
 
+.ni{
+  margin-top:5px;
+}
+.ni > input{
+  margin-left: 10px !important;
+  width: calc(80% - 45px) !important;
+}
+.ni > svg{
+  margin-left: 10%;
+  color: var(--t1);
+}
+.ni > svg:hover{
+  cursor:pointer;
+}
+.flex-wrapper{
+  display:flex;
+}
 .log-form {
   width: 50%;
   max-width: 400px;
@@ -377,7 +394,7 @@ textArea:focus,
   border-radius:15px;
   padding:50px 20px;
 }
-#cf{
+#cf, #copy{
   margin:auto;
   background:var(--m1);
   color:white;
