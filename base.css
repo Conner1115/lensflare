@@ -490,9 +490,10 @@ textArea:focus,
   padding: 20px;
 }
 #image-wrapper{
-  background: black;
+  background: transparent;
   border-radius: 10px;
   display:flex;
+  max-height: calc(100% - 100px);
 }
 #image-wrapper > img{
   width: 100%;
