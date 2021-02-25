@@ -19,6 +19,7 @@ body,
 html {
   background: var(--col1);
   font-family: var(--mont);
+  scroll-behavior:smooth;
 }
 input,
 textArea,
@@ -26,6 +27,10 @@ button {
   outline: none;
   font-family: var(--font);
   color: var(--colt);
+}
+textarea{
+  resize:vertical;
+  transition: 0s;
 }
 button:hover,
 [type="submit"]:hover {
@@ -42,9 +47,9 @@ h6 {
 }
 a {
   text-decoration: none;
-  color: rgb(0, 200, 255);
+  color: rgb(0, 150, 255);
 }
-p{
+p {
   padding-left: 10%;
   padding-right: 10%;
 }
@@ -215,6 +220,18 @@ textArea:focus,
   border:none;
   background:transparent;
   padding:0;
+}
+.comment{
+  width: 80%;
+  padding: 10px;
+  margin: 20px 10%;
+  border-radius: 10px;
+  box-shadow: 1px 1px 3px 0 rgba(0,0,0,0.1);
+  background: white;
+}
+.comment > p{
+  padding-left: 5%;
+  padding-right: 5%;
 }
 
 #search-parent {
@@ -414,6 +431,48 @@ textArea:focus,
 }
 #or{
   margin:10px 0;
+}
+#background-cover{
+  width: 80%;
+  height: 80%;
+  max-width: 900px;
+  background: var(--col1);
+  position: absolute;
+  top:5%;
+  left: 50%;
+  transform: translatex(-50%);
+  box-shadow: 0 0 0 1200px rgba(0,0,0,0.25), 2px 2px 5px 0 rgba(0,0,0,0.25);
+  border-radius: 10px;
+  overflow-y:auto;
+}
+#image-col-left{
+  position:absolute;
+  left: 0;
+  top: 0;
+  height: calc(100% - 40px);
+  width: calc(50% - 40px);
+  padding: 20px;
+}
+#image-col-right{
+  position:absolute;
+  left: 50%;
+  top: 0;
+  height: calc(100% - 40px);
+  width: calc(50% - 40px);
+  padding: 20px;
+}
+#image-col-bottom{
+  position:absolute;
+  left: 0;
+  top: 100%;
+  height: auto;
+  width: calc(100% - 40px);
+  padding: 20px;
+}
+#image-wrapper > img{
+  width: 100%;
+  border-radius: 10px;
+  box-shadow: 2px 2px 5px 0 rgba(0,0,0,0.25);
 }
 
 
