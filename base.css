@@ -466,10 +466,10 @@ textArea:focus,
   overflow-y:auto;
 }
 #image-col-left{
-  position:absolute;
+  position:relative;
   left: 0;
   top: 0;
-  height: calc(100% - 40px);
+  height: auto;
   width: calc(50% - 40px);
   padding: 20px;
 }
@@ -482,9 +482,7 @@ textArea:focus,
   padding: 20px;
 }
 #image-col-bottom{
-  position:absolute;
   left: 0;
-  top: 100%;
   height: auto;
   width: calc(100% - 40px);
   padding: 20px;
