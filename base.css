@@ -503,7 +503,7 @@ textArea:focus,
 #image-wrapper > img:hover{
   cursor:pointer;
   transition: 0.25s;
-  opacity: 0.5;
+  transform: rotateY(-10deg);
 }
 
 
