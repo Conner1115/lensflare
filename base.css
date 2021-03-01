@@ -144,8 +144,8 @@ textArea:focus,
   opacity: 1;
 }
 .nav-out {
-  display: block;
-  opacity: 1;
+  display: none;
+  opacity: 0;
 }
 .btn-in {
   left: 220px;
@@ -503,7 +503,15 @@ textArea:focus,
 #image-wrapper > img:hover{
   cursor:pointer;
   transition: 0.25s;
-  transform: rotateY(-10deg);
+  transform: rotatey(10px);
+}
+#new-notif{
+  background: var(--m1);
+  width: 5px;
+  height: 5px;
+  border:solid 2px var(--col1);
+  border-radius: 50%;
+  transform: translate(-31px, 2px);
 }
 
 
