@@ -5,6 +5,7 @@
   --t1: rgb(75, 75, 75);
   --m1: rgb(100, 225, 125);
   --m2: rgb(230, 255, 230);
+  --m3: rgb(0, 150, 0);
   --tr: rgba(0, 200, 50);
 
   --mont: "Montserrat", sans-serif;
@@ -19,7 +20,7 @@ body,
 html {
   background: var(--col1);
   font-family: var(--mont);
-  scroll-behavior:smooth;
+  scroll-behavior: smooth;
 }
 input,
 textArea,
@@ -28,8 +29,8 @@ button {
   font-family: var(--font);
   color: var(--colt);
 }
-textarea{
-  resize:vertical;
+textarea {
+  resize: vertical;
   transition: 0s;
 }
 button:hover,
@@ -54,22 +55,22 @@ p {
   padding-right: 10%;
 }
 
-.ni{
-  margin-top:5px;
+.ni {
+  margin-top: 5px;
 }
-.ni > input{
+.ni > input {
   margin-left: 10px !important;
   width: calc(80% - 45px) !important;
 }
-.ni > svg{
+.ni > svg {
   margin-left: 10%;
   color: var(--t1);
 }
-.ni > svg:hover{
-  cursor:pointer;
+.ni > svg:hover {
+  cursor: pointer;
 }
-.flex-wrapper{
-  display:flex;
+.flex-wrapper {
+  display: flex;
 }
 .log-form {
   width: 50%;
@@ -170,26 +171,26 @@ textArea:focus,
   background: rgb(0, 175, 50);
   border: solid rgb(0, 150, 0) 1px;
   border-radius: 5px;
-  color: white;
+  color: var(--col1);
   font-weight: bold;
   font-size: 15px;
   outline: none;
 }
-.image-grid{
+.image-grid {
   display: flex;
   flex-wrap: wrap;
   padding: 0 4px;
-  margin:auto;
-  justify-content:center;
+  margin: auto;
+  justify-content: center;
 }
 .image {
   border-radius: 10px;
   z-index: 1;
 }
-.image > img{
+.image > img {
   width: 100%;
-  height:auto;
-  box-shadow: 0 2px 5px 0 rgba(0,0,0,0.5);
+  height: auto;
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.5);
   border-radius: 10px;
 }
 .col {
@@ -202,56 +203,94 @@ textArea:focus,
   vertical-align: middle;
   width: 100%;
 }
-.image:hover{
-  cursor:zoom-in;
+.image:hover {
+  cursor: zoom-in;
   transition: 0.5s;
 }
-.stats{
+.stats {
   margin-left: 10px;
   margin-top: -40px;
-  color:var(--m1);
-  display:flex;
+  color: var(--m1);
+  display: flex;
 }
-.stats > form > button > svg{
-  filter:drop-shadow(1px 1px 2px rgb(0,0,0,0.5));
-  margin:2.5px;
+.stats > form > button > svg {
+  filter: drop-shadow(1px 1px 2px rgb(0, 0, 0, 0.5));
+  margin: 2.5px;
 }
-.hide-sub{
-  border:none;
-  background:transparent;
-  padding:0;
+.hide-sub {
+  border: none;
+  background: transparent;
+  padding: 0;
 }
-.comment{
+.comment {
   width: 80%;
   padding: 10px;
   margin: 20px 10%;
   border-radius: 10px;
-  box-shadow: 1px 1px 3px 0 rgba(0,0,0,0.1);
-  background: white;
+  box-shadow: 1px 1px 3px 0 rgba(0, 0, 0, 0.1);
+  background: var(--col1);
 }
-.comment > p{
+.comment > p {
   padding-left: 5%;
   padding-right: 5%;
 }
-.stat{
+.stat {
   margin: 0 10px;
   font-size: 20px;
 }
-.stat > svg{
+.stat > svg {
   width: 20px;
   transform: translatey(6px);
 }
+.notif {
+  background: var(--col1);
+  font-size: 15px;
+  margin: auto;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  width: 80%;
+  max-width: 700px;
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px 0 rgba(0,0,0,0.1);
+  text-align:center;
+}
+.notif > a > svg{
+  position: relative;
+  top: 5px;
+  width: 17px;
+}
+.read-notif{
+  border-radius: 50%;
+  width: 25px;
+  height: 25px;
+  background:var(--col1);
+  box-shadow: 0 2px 3px 0 rgba(0,0,0,0.25);
+  border:none;
+  transform: translate(10px, 5px)
+}
+.read-notif > svg{
+  width: 20px;
+  transform: translate(-3px, 0px);
+  color: var(--m3);
+}
 
-#stat-like:hover, #stat-bookmark:hover{
+#no-read{
+  color:var(--col3);
+  text-align:center;
+  display:none;
+}
+#stat-like:hover,
+#stat-bookmark:hover {
   cursor: pointer;
 }
-#i-stats{
-  position:relative;
-  text-align:center;
-  align-content:center;
-  justify-content:center;
-  display:flex;
-  left:50%;
+#i-stats {
+  position: relative;
+  text-align: center;
+  align-content: center;
+  justify-content: center;
+  display: flex;
+  left: 50%;
   transform: translatex(-50%);
 }
 #search-parent {
@@ -311,15 +350,14 @@ textArea:focus,
 #logo-title {
   font-family: var(--syn);
   display: none;
-  
 }
 #logo-title > a {
   color: var(--t1);
   position: fixed;
   top: 60px;
   left: 50%;
-  transform:translate(-50%,0);
-  display:inline-block;
+  transform: translate(-50%, 0);
+  display: inline-block;
 }
 #logo-parent {
   display: flex;
@@ -403,135 +441,136 @@ textArea:focus,
 #error:hover {
   cursor: pointer;
 }
-#loader{
-  padding:20px;
-  position:absolute;
-  top:50%;
-  left:50%;
-  transform:translate(-50%, -50%);
-  border-radius:15px;
-  box-shadow: 0 0 5px 0 rgba(0,0,0,0.25);
-  width:50%;
-  min-width:200px;
-  max-width:800px;
-  display:none;
+#loader {
+  padding: 20px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 15px;
+  box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.25);
+  width: 50%;
+  min-width: 200px;
+  max-width: 800px;
+  display: none;
 }
-#load-bar{
-  height:5px;
-  border-radius:10px;
-  background:var(--m2);
-  overflow:hidden;
+#load-bar {
+  height: 5px;
+  border-radius: 10px;
+  background: var(--m2);
+  overflow: hidden;
 }
-#prog{
-  background:var(--m1);
-  width:0px;
-  border-radius:10px;
-  height:5px;
-  animation:ease-in-out load 2s infinite;
-  position:absolute;
+#prog {
+  background: var(--m1);
+  width: 0px;
+  border-radius: 10px;
+  height: 5px;
+  animation: ease-in-out load 2s infinite;
+  position: absolute;
 }
-#file-wrap{
-  border:dashed rgb(200,200,200) 1px;
-  border-radius:15px;
-  padding:50px 20px;
+#file-wrap {
+  border: dashed rgb(200, 200, 200) 1px;
+  border-radius: 15px;
+  padding: 50px 20px;
 }
-#cf, #copy{
-  margin:auto;
-  background:var(--m1);
-  color:white;
-  border-radius:10px;
-  text-align:center;
-  display:block;
-  padding:10px;
-  max-width:100px;
-  border:none;
+#cf,
+#copy {
+  margin: auto;
+  background: var(--m1);
+  color: var(--col1);
+  border-radius: 10px;
+  text-align: center;
+  display: block;
+  padding: 10px;
+  max-width: 100px;
+  border: none;
 }
-#cf:hover, [type='submit']:hover{
+#cf:hover,
+[type="submit"]:hover {
   cursor: pointer;
 }
-#or{
-  margin:10px 0;
+#or {
+  margin: 10px 0;
 }
-#background-cover{
+#background-cover {
   width: 80%;
   height: 80%;
   max-width: 900px;
   background: var(--col1);
   position: absolute;
-  top:5%;
+  top: 5%;
   left: 50%;
   transform: translatex(-50%);
-  box-shadow: 0 0 0 1200px rgba(0,0,0,0.25), 2px 2px 5px 0 rgba(0,0,0,0.25);
+  box-shadow: 0 0 0 1200px rgba(0, 0, 0, 0.25),
+    2px 2px 5px 0 rgba(0, 0, 0, 0.25);
   border-radius: 10px;
-  overflow-y:auto;
+  overflow-y: auto;
 }
-#image-col-left{
-  position:relative;
+#image-col-left {
+  position: relative;
   left: 0;
   top: 0;
   height: auto;
   width: calc(50% - 40px);
   padding: 20px;
 }
-#image-col-right{
-  position:absolute;
+#image-col-right {
+  position: absolute;
   left: 50%;
   top: 0;
   height: calc(100% - 40px);
   width: calc(50% - 40px);
   padding: 20px;
 }
-#image-col-bottom{
+#image-col-bottom {
   left: 0;
   height: auto;
   width: calc(100% - 40px);
   padding: 20px;
 }
-#image-wrapper{
+#image-wrapper {
   background: transparent;
   border-radius: 10px;
-  display:flex;
+  display: flex;
   max-height: calc(100% - 100px);
 }
-#image-wrapper > img{
+#image-wrapper > img {
   width: 100%;
   max-height: 100%;
   border-radius: 10px;
-  box-shadow: 2px 2px 5px 0 rgba(0,0,0,0.25);
+  box-shadow: 2px 2px 5px 0 rgba(0, 0, 0, 0.25);
   transition: 0.25s;
 }
-#image-wrapper > img:hover{
-  cursor:pointer;
+#image-wrapper > img:hover {
+  cursor: pointer;
   transition: 0.25s;
   transform: rotatey(10px);
 }
-#new-notif{
+#new-notif {
   background: var(--m1);
   width: 5px;
   height: 5px;
-  border:solid 2px var(--col1);
+  border: solid 2px var(--col1);
   border-radius: 50%;
   transform: translate(-31px, 2px);
 }
 
-
-
-@keyframes load{
-  0%{
-    left:20px;
-    width:0px;
-  }
-  25%{
-    width:calc(100% - 40px);
-    left:20px;
-  }
-  50%{
-    left:calc(100% - 20px);
-    width:0px;
-  }
-  100%{
+@keyframes load {
+  0% {
     left: 20px;
-    width:0px;
+    width: 0px;
+  }
+  25% {
+    width: calc(100% - 40px);
+    left: 20px;
+  }
+  50% {
+    left: calc(100% - 20px);
+    width: 0px;
+  }
+  100% {
+    left: 20px;
+    width: 0px;
   }
 }
 
@@ -605,7 +644,7 @@ textArea:focus,
   }
 }*/
 
-@media (max-width: 950px) {
+@media (max-width: 1015px) {
   .def {
     display: none;
   }
@@ -616,9 +655,9 @@ textArea:focus,
     font-size: 12px;
   }
 }
-@media (max-width: 680px) {
+@media (max-width: 750px) {
   #logo-title {
-    display:  block;
+    display: block;
     position: relative;
     top: -15px;
   }
@@ -647,61 +686,83 @@ textArea:focus,
     transition: 0.5s ease-in;
   }
   .nav-out {
-    left: -200px;
+    left: -100%;
     opacity: 0;
     transition: 0.5s ease-in;
   }
-  #background-cover{
+  #background-cover {
     width: 100%;
   }
 }
-@media (max-width: 580px) {
+@media (max-width: 650px) {
   #search-form {
     display: none;
   }
   .sc {
     display: block !important;
   }
-  #image-col-left{
-    position:relative;
-    top:0;
-    left:0;
+  #image-col-left {
+    position: relative;
+    top: 0;
+    left: 0;
     width: calc(100% - 40px);
     height: auto;
   }
-  #image-col-right{
-    position:relative;
-    top:0;
-    left:0;
+  #image-col-right {
+    position: relative;
+    top: 0;
+    left: 0;
     width: calc(100% - 40px);
     height: auto;
   }
-  #image-col-bottom{
-    position:relative;
-    top:0;
-    left:0;
+  #image-col-bottom {
+    position: relative;
+    top: 0;
+    left: 0;
     width: calc(100% - 40px);
     height: auto;
   }
-  p{
+  p {
     font-size: 12px;
   }
-  
 }
-@media (max-width: 400px) {
+@media (max-width: 480px) {
   .nav-link > a {
     margin: 0 12.5px;
   }
   #menu-button {
     left: 55px;
   }
+  #new-notif {
+    transform: translate(-23px, 2px);
+  }
 }
-@media (max-width: 320px) {
+@media (max-width: 380px) {
   .nav-link > a {
     margin: 0 7.5px;
   }
   #nav-tabs {
     width: 100%;
+  }
+  .btn-in {
+    left: calc(100% - 30px);
+    margin-top: -10px;
+    transform: rotate(720deg);
+    transition: 0.5s ease-in;
+    border-radius: 50% 0 50% 50% !important;
+  }
+  #new-notif {
+    transform: translate(-18px, 2px);
+  }
+}
+@media (max-width: 320px) {
+  .nav-link > a > svg {
+    width: 17px;
+  }
+  #new-notif {
+    transform: translate(-15px, 4px);
+    width: 3px;
+    height: 3px;
   }
 }
 
