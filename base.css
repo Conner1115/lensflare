@@ -187,7 +187,7 @@ textArea:focus,
   border-radius: 10px;
   z-index: 1;
 }
-.image > img {
+.image > a > img {
   width: 100%;
   height: auto;
   box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.5);
@@ -202,10 +202,6 @@ textArea:focus,
   margin-top: 8px;
   vertical-align: middle;
   width: 100%;
-}
-.image:hover {
-  cursor: zoom-in;
-  transition: 0.5s;
 }
 .stats {
   margin-left: 10px;
