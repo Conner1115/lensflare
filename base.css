@@ -1,3 +1,6 @@
+/******************************************
+ * Tags, Root setup, etc
+ ******************************************/
 :root {
   --col1: rgb(255, 255, 255);
   --col2: rgb(240, 240, 240);
@@ -55,6 +58,20 @@ p {
   padding-right: 10%;
 }
 
+/******************************************
+ * Classes
+ ******************************************/
+
+.settings-form{
+  width: 80%;
+  margin:auto;
+  max-width:700px;
+  border-radius: 15px;
+  box-shadow: 0 0 5px 0 rgba(0,0,0,0.25);
+  padding-top:20px;
+  padding-bottom:20px;
+  margin: 20px auto;
+}
 .ni {
   margin-top: 5px;
 }
@@ -299,6 +316,10 @@ textArea:focus,
   font-family: var(--mont);
   text-align:left;
 }
+
+/******************************************
+ * IDs
+ ******************************************/
 
 #no-read{
   color:var(--col3);
@@ -579,6 +600,10 @@ textArea:focus,
   border-radius: 50%;
   transform: translate(-31px, 2px);
 }
+
+/******************************************
+ * Animation(s)
+ ******************************************/
 
 
 
